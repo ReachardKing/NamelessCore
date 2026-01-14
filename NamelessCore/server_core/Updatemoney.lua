@@ -1,12 +1,7 @@
 
-
 NamelessCore = {}
 NamelessCore.players = {}
 NamelessCore.functions = {}
-
-function getResourceObjects()
-    return NamelessCore
-end
 
 function NamelessCore.functions.update(player)
     local player = tonumber(player)
@@ -132,6 +127,10 @@ function NamelessCore.functions.withdraw(amount, player)
         return true 
     end
     return false
+end
+
+function NamelessCore.functions.Invoice(amount, player, traget)
+    return NamelessCore.functions.transfer(amount, player, traget)
 end
 
 function NamelessCore.functions.deposit(amount, player)

@@ -1,19 +1,19 @@
 fx_version 'cerulean'
 game 'gta5'
 
-lua54 'on'
+lua54 'yes'
 
 name "NamelessCore"
 
 description "NamelessCore"
 
-author "Physics_is_ki"
+author "Reachard King"
 
 version "1.0.0"
 
 shared_scripts {
-	"@ox_lib/init.lua",
-	'shared/*.lua'
+	'Init.lua',
+	'shared/main.lua'
 }
 
 client_scripts {
@@ -26,6 +26,22 @@ server_scripts {
 	'server_core/*.lua'
 }
 
-files {
-	'shared/init.lua'
+exports 'GetServerObjcts'
+client_exports 'GetServerObjcts'
+server_exports {'GetServerObjcts'}
+
+server_exports {
+	'NewCharacter',
+	'FetchCharacters',
+	'SetActiveCharacter',
+	'FetchAllCharacters',
+	'SetData'
+}
+
+exports {
+	'NewCharacter',
+	'FetchCharacters',
+	'SetActiveCharacter',
+	'FetchAllCharacters',
+	'SetData'
 }

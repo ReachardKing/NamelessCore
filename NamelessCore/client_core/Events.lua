@@ -1,4 +1,4 @@
-RegisterNetEvent("updateMoney", function()
+ RegisterNetEvent("updateMoney", function(cash, bank)
     if not NamelessCore.player then return end
 
     NamelessCore.player.cash = cash
@@ -6,16 +6,14 @@ RegisterNetEvent("updateMoney", function()
 end)
 
 RegisterNetEvent("NamelessCore:Characterloaded", function(character)
-
     NamelessCore.player = character 
-
 end)
 
 RegisterNetEvent("NamelessCore:updateCharacter", function(character)
     NamelessCore.player = character
 end)
 
-RegisterNetEvent("NamlessCore:updatelastLocation", function(location)
+RegisterNetEvent("NamelessCore:updatelastLocation", function(location)
     if not NamelessCore.player then return end
     NamelessCore.lastLocation = location
 end)
